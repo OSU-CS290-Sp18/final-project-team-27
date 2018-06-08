@@ -1,0 +1,33 @@
+body{
+  padding:0;
+  margin:0;
+
+}
+
+
+.game_element{
+  width:1000px;
+  height: 300px;
+  border: black solid 1px;;
+}
+.game_image{
+  height:200px;
+  float:left;
+
+}
+.game_element h2{
+  padding:0;
+  margin:0;
+  padding-left:20px;
+  padding-right:20px;
+
+}
+.game_info{
+    display: flex;
+    flex-direction: column;
+}
+.game_info p{
+  padding:0;
+  margin:0;
+  font-family: "Roboto", ;
+}
