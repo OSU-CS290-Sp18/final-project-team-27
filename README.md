@@ -1,4 +1,3 @@
-# Final Project (name change later)
-**Code and demo due by 5:00pm on Friday, 6/15/2018**
+# Header File
 
-This will display info for our final project. Remember to keep each other updated on what is going on and contact each other when help is needed.
+Created the header file as a partial to add in later, added in a couple reference pictures of website, text file lists categories to be included in website.
