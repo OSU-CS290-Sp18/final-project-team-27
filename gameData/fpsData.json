@@ -7,7 +7,7 @@
 			"photoURL":"https://3dnews.ru/assets/external/illustrations/2018/05/23/970106/Rainbow-Six-Siege-Title.750.png"
 		},
 		]
-	}
+	},
         "Battlefiled1":{
                 "name": "Battle filed1 -$14.99",
                 "photo":[
@@ -17,7 +17,7 @@
                         "photoURL":"https://media.contentapi.ea.com/content/bf/en-us/games/battlefield-1/_global_/_jcr_content/ccm/componentwrapper_0/components/opengraph/ogImage.img.jpg"
                 },
                 ]
-        }
+        },
         "overwatch":{
                 "name": "Overwatch-$39.99",
                 "photo":[
@@ -26,6 +26,6 @@
                         "photoURL":"https://i.ytimg.com/vi/UEYp1RTvllM/maxresdefault.jpg"
                 },
                 ]
-        }
+        },
 }
 
