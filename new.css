@@ -1,5 +1,9 @@
 /* these control all the links, change if needed to match the theme */
 a {
+  text-decoration: none;
+}
+
+a {
   color: #fff;
 }
 
@@ -13,6 +17,21 @@ a:focus {
 }
 
 /* these change the navbar + searchbar stuff */
+.navbar {
+  background-color: #343434;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.navlist {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.navitem {
+  display: inline-block;
+}
+
 .navlink a {
   padding: 8px 10px;
   display: inline-block;
