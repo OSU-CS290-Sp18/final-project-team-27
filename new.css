@@ -1,4 +1,4 @@
-
+/* these control all the links, change if needed to match the theme */
 a {
   color: #fff;
 }
@@ -12,6 +12,7 @@ a:focus {
   outline: none;
 }
 
+/* these change the navbar + searchbar stuff */
 .navlink a {
   padding: 8px 10px;
   display: inline-block;
