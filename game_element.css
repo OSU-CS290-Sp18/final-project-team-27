@@ -1,0 +1,62 @@
+body{
+  padding:0;
+  margin:0;
+
+}
+.games_container{
+  padding-left:100px;
+padding-top:300px;
+}
+.game_element{
+  width:1000px;
+   /* height: 220px; */
+  border: grey solid 1px;
+  /* position:relative; */
+}
+
+.game_image{
+  width:400px;
+  float:left;
+  padding:10px;
+
+}
+.game_title{
+  text-align: center;
+  padding:0;
+  margin:0;
+  padding-left:10px;
+  padding-right:20px;
+
+}
+
+.game_info{
+    display: flex;
+    flex-direction: column;
+
+}
+.game_price{
+  font-style: italic;
+
+}
+
+ .game_info p{
+  padding:0;
+  margin:0;
+  padding-top:10px;
+  /* font-family: "Roboto", ; */
+  max-width:520px;
+  font-family: 'Roboto', sans-serif;
+
+}
+.game_element{
+  border-radius:1px;
+  margin-bottom:10px;
+  background-color:grey;
+
+}
+.game_info{
+  margin:10px;
+  background-color:white;
+  padding:10px;
+  border-radius:5px;
+}
