@@ -15,7 +15,6 @@ app.use(express.static('public'));
 app.use(express.static('public'));
 
 
-
 app.get('/',function(req,res,next){
 res.status(200).render('home',{game_element:allData});
 });
@@ -40,10 +39,21 @@ app.get('/all',function(req,res,next){
 res.status(200).render('home',{game_element:allData});
 });
 
-app.get('/404',function(req,res,next){
-res.status(404).render('404');
+app.get('/all/:gameID',function(req,res,next){
+var gameNum = req.params.gameID;
+if(allData[gameNum])
+	res.status(200).render('onegame',{game:allData[gameNum]});
+else
+	next();
 });
 
+
+
+
+
+app.get('*',function(req,res,next){
+res.status(404).render('404');
+});
 
 
 app.listen(port, function () {
