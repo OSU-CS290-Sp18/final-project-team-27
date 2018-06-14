@@ -16,29 +16,11 @@
       </div>
 
       <div class="all_comments_container">
-        <div class="single_comment">
-            <p class="single_comment_username">
-            TheUser</p>
-            <p class="single_comment_comment_words">
-            This is my comment hear me roar.</p>
-        </div>
+        {{#each commentsBox}}
+          {{>commentsBox}}
+        {{/each}}
 
-
-        <div class="single_comment">
-          <p class="single_comment_username">
-          TheUser</p>
-          <p class="single_comment_comment_words">
-          This is my comment hear me roar.</p>
-        </div>
-
-        <div class="single_comment">
-          <p class="single_comment_username">
-          TheUser</p>
-          <p class="single_comment_comment_words">
-          This is my comment hear me roar. This is my comment hear me roar. This is my comment hear me roar. This is my comment hear me roar. This is my comment hear me roar. This is my comment hear me roar.</p>
-        </div>
-
-    </div>
+      </div>
 
   </div>
 </body>
