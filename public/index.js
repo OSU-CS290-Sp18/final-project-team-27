@@ -13,7 +13,7 @@ function handleModalAcceptClick() {
    var user = document.getElementsByClassName("input_user_name").value;
    var comment = document.getElementsByClassName("input_comment").value;
 
-   if (!comment || !author) {
+   if (!comment || !user) {
       alert("Please enter all of the fields before submitting.");
    } else {
       var requrest = new XMLHttpRequest();
@@ -46,11 +46,8 @@ function handleModalAcceptClick() {
 
 window.addEventListener('DOMContentLoaded', function () {
 
-  var submitButton = document.getElementById('submit_button');
-  submit_button.addEventListener('click', handleModalAcceptClick);
-
+  var submitButton = document.getElementsByClassName('submit_button');
+  submitButton.addEventListener('click', handleModalAcceptClick);
 
   }
-
 });
-
