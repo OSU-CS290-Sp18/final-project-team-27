@@ -1,0 +1,74 @@
+[
+	{
+		"num":"0",
+		"PhotoURL":"https://s.aolcdn.com/hss/storage/midas/3167606ff2b4945981a5b02779bf8853/206196542/DXzJwdsU0AE_2zY.jpg",
+		"title": "Mario Tennis",
+		"price": "59.88",
+		"categories":"Sports",
+		"descirption":"Revive old rivalries in full-blown tennis battles with a roster of Mario series favorites using tricked-out shots"
+	},
+
+	{	"num":"1",
+		"PhotoURL":"https://i.ytimg.com/vi/BWR9P0gJGEU/maxresdefault.jpg",
+		"title":"NBA2K",
+		"price":"19.99",
+		"categories":"Sports",
+		"descirption":"The NBA 2K series is a series of basketball simulation video games developed and released annually since 1999. The premise of each game in the series is to emulate the sport of basketball."
+	},
+        {"num":"2",
+                "PhotoURL":"https://media.contentapi.ea.com/content/dam/ea/easports/fifa/home/2018/world-cup-april30/top/f18wc-homepage-top-hero-bg-xs.jpg",
+                "title":"FIFA18",
+                "price":"19.99",
+                "categories":"Sports",
+                "descirption":"Powered by Frostbite™ and Real Player Motion Technology, EA SPORTS™ FIFA 18 blurs the line between the virtual and real worlds, bringing to life the players, teams, and atmospheres that immerse you in the emotion of The World’s Game"
+        },
+        {"num":"3",
+                "PhotoURL":"https://3dnews.ru/assets/external/illustrations/2018/05/23/970106/Rainbow-Six-Siege-Title.750.png",
+                "title":"Rainbow Six Siege",
+                "price":"14.99",
+                "categories":"FPS",
+                "descirption":"Tom Clancy's Rainbow Six Siege is the latest installment of the acclaimed first-person shooter franchise developed by the renowned Ubisoft Montreal studio."
+        },
+        {"num":"4",
+                "PhotoURL":"https://media.contentapi.ea.com/content/bf/en-us/games/battlefield-1/_global_/_jcr_content/ccm/componentwrapper_0/components/opengraph/ogImage.img.jpg",
+                "title":"Battlefield 1",
+                "price":"14.99",
+                "categories":"FPS",
+                "descirption":"Battlefield1 takes you back to The Great War, WW1, where new technology and worldwide conflict changed the face of warfare forever. Take part in every battle, control every massive vehicle, and execute every maneuver that turns an entire fight around. The whole world is at war – see what’s beyond the trenches."
+        },
+        {"num":"5",
+                "PhotoURL":"https://i.ytimg.com/vi/UEYp1RTvllM/maxresdefault.jpg",
+                "title":"Overwatch",
+                "price":"39.99",
+                "categories":"FPS",
+                "descirption":"The world needs heroes. Join over 40 million players* as you take your place in the world of Overwatch. Choose your hero from a diverse cast of soldiers, scientists, adventurers, and oddities. Bend time, defy physics, and unleash an array of extraordinary powers and weapons. Engage your enemies in iconic locations from around the globe in the ultimate team-based shooter."
+        },
+        {"num":"6",
+                "PhotoURL":"https://static.makeuseof.com/wp-content/uploads/2017/10/whats-league-legends-670x335.jpg",
+                "title":"League of Legends",
+                "price":"Free",
+                "categories":"MOBA",
+                "descirption":"In League of Legends, players assume the role of an unseen summoner that controls a champion with unique abilities and battle against a team of other players or computer-controlled champions."
+        },
+        {"num":"7",
+                "PhotoURL":"https://pre00.deviantart.net/ace5/th/pre/f/2012/210/1/3/dota2_wall_paper_by_diced2k-d5902lf.png",
+                "title":"Dota 2",
+                "price":"Free",
+                "categories":"MOBA",
+                "descirption":"Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has truly taken on a life of its."
+        },
+        {"num":"8",
+                "PhotoURL":"https://cracked-games.org/wp-content/uploads/2016/06/Need-For-Speed-Hot-Pursuit.jpg",
+                "title":"Need for Speed: Hot Pursuit",
+                "price":"19.99",
+                "categories":"Racing",
+                "descirption":"Hot Pursuit's gameplay is set in the fictional Seacrest County, which is based on California, in which players can compete in several types of races. Players can compete online (except in the Wii version), which includes additional game modes such as Hot Pursuit, Interceptor and Race."
+        },
+        {"num":"9",
+                "PhotoURL":"https://humblebundle.imgix.net/misc/files/hashed/ae475dd426714e9e7857b28f92009011d16ac98e.jpg?auto=compress,format&fit=crop&h=353&w=616&s=38cfd967ba29cffc30f04f9ff51e5e65",
+                "title":"Rocket League",
+                "price":"19.99",
+                "categories":"Racing",
+                "descirption":"Soccer meets driving once again in the long-awaited, physics-based multiplayer-focused sequel to Supersonic Acrobatic Rocket-Powered Battle-Cars! Choose a variety of high-flying vehicles equipped with huge rocket boosters to score amazing aerial goals and pull-off incredible game-changing saves!"
+        }
+]

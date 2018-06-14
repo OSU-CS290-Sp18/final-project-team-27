@@ -1,0 +1,26 @@
+
+<body>
+  <div class="background_container_box">
+
+    {{>gameintro game}}
+
+
+    <div class="comments_main_box">
+
+      <div class="comments_insert_comment">
+        <p class="username_in">Username: </p>
+        <input class="input_user_name"></input>
+        <p class="comment_in">Comment: </p>
+        <textarea class="input_comment" name="paragraph_text" cols="50" rows="10"></textarea>
+        <button class="submit_button">Submit</button>
+      </div>
+
+      <div class="all_comments_container">
+        {{#each comments}}
+          {{>commentBox}}
+        {{/each}}
+
+      </div>
+
+  </div>
+</body>

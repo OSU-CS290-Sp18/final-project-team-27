@@ -1,4 +1,14 @@
-# Final Project (name change later)
-**Code and demo due by 5:00pm on Friday, 6/15/2018**
+# Game World
 
-This will display info for our final project. Remember to keep each other updated on what is going on and contact each other when help is needed.
+
+
+
+Use the below to initilize your database.
+Server currently uses a 'commentsDB' collection name.
+```
+mongoimport --host classmongo.engr.oregonstate.edu \
+  --username YOUR_MONGODB_USERNAME                 \
+  --db YOUR_MONGODB_DB_NAME                        \
+  --password YOUR_MONGODB_PASSWORD                 \
+  --collection people --jsonArray  mongo-db-init.json
+```

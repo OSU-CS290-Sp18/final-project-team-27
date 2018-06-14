@@ -1,0 +1,23 @@
+[
+        {"num":"3",
+                "PhotoURL":"https://3dnews.ru/assets/external/illustrations/2018/05/23/970106/Rainbow-Six-Siege-Title.750.png",
+                "title":"Rainbow Six",
+                "price":"14.99",
+                "categories":"FPS",
+                "descirption":"Tom Clancy's Rainbow Six Siege is the latest installment of the acclaimed first-person shooter franchise developed by the renowned Ubisoft Montreal studio."
+        },
+        {"num":"4",
+                "PhotoURL":"https://media.contentapi.ea.com/content/bf/en-us/games/battlefield-1/_global_/_jcr_content/ccm/componentwrapper_0/components/opengraph/ogImage.img.jpg",
+                "title":"Battlefield 1",
+                "price":"14.99",
+                "categories":"FPS",
+                "descirption":"Battlefield1 takes you back to The Great War, WW1, where new technology and worldwide conflict changed the face of warfare forever. Take part in every battle, control every massive vehicle, and execute every maneuver that turns an entire fight around. The whole world is at war – see what’s beyond the trenches."
+        },
+        {"num":"5",
+                "PhotoURL":"https://i.ytimg.com/vi/UEYp1RTvllM/maxresdefault.jpg",
+                "title":"Vverwatch",
+                "price":"39.99",
+                "categories":"FPS",
+                "descirption":"The world needs heroes. Join over 40 million players* as you take your place in the world of Overwatch. Choose your hero from a diverse cast of soldiers, scientists, adventurers, and oddities. Bend time, defy physics, and unleash an array of extraordinary powers and weapons. Engage your enemies in iconic locations from around the globe in the ultimate team-based shooter."
+        }
+]
