@@ -39,13 +39,45 @@ app.get('/all',function(req,res,next){
 res.status(200).render('home',{game_element:allData});
 });
 
-app.get('/all/:gameID',function(req,res,next){
-var gameNum = req.params.gameID;
+app.get('/all/:num',function(req,res,next){
+var gameNum = req.params.num;
 if(allData[gameNum])
 	res.status(200).render('onegame',{game:allData[gameNum]});
 else
 	next();
 });
+
+//app.get('/FPS/:gameID',function(req,res,next){
+//var gameNum = req.params.gameID;
+//if(fpsData[gameNum])
+//	res.status(200).render('onegame',{game:fpsData[gameNum]});
+//else
+//	next();
+//});
+//
+//app.get('/sports/:gameID',function(req,res,next){
+//var gameNum = req.params.gameID;
+//if(sportsData[gameNum])
+//	res.status(200).render('onegame',{game:sportsData[gameNum]});
+//else
+//	next();
+//});
+//
+//app.get('/MOB/:gameID',function(req,res,next){
+//var gameNum = req.params.gameID;
+//if(mobData[gameNum])
+//	res.status(200).render('onegame',{game:mobData[gameNum]});
+//else
+//	next();
+//});
+//
+//app.get('/racing/:gameID',function(req,res,next){
+//var gameNum = req.params.gameID;
+//if(racingData[gameNum])
+//	res.status(200).render('onegame',{game:racingData[gameNum]});
+//else
+//	next();
+//});
 
 
 
