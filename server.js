@@ -63,7 +63,7 @@ app.get('/all/:num',function(req,res,next){
 var gameNum = req.params.num;
 var commentCollection = mongoDB.collection('commentsDB');
 commentCollection.find({commentId: gameNum}).toArray(function (err, commentDocs){
-  console.log("commendDocs: ", commentDocs[0]['comments']);
+  //console.log("commendDocs: ", commentDocs[0]['comments']);
   if (err) {
       res.status(500).send("Error fetching person from DB.");
     } else if (commentDocs.length > 0) {
@@ -77,12 +77,12 @@ commentCollection.find({commentId: gameNum}).toArray(function (err, commentDocs)
 //======MONGO DB========
 
 app.post('/all/:n/addComment', function (req, res, next){
-  console.log("===reached POST");
+  //console.log("===reached POST");
    var n = req.params.n;
-   console.log("req.body--", req.body);
+   //console.log("req.body--", req.body);
 
    if (req.body && req.body.user && req.body.comment) {
-     console.log("this ran 1");
+     //console.log("this ran 1");
       var comment = {
          user: req.body.user,
          comment: req.body.comment
@@ -97,7 +97,7 @@ app.post('/all/:n/addComment', function (req, res, next){
                console.log("error adding to DB");
             } else {
                res.status(200).send("Successfully inserted comment.");
-               console.log("successfuly added to DB");
+               console.log("==Successfuly added comment to DB");
             }
          }
       );
