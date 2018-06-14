@@ -10,13 +10,13 @@ function getGameNumberFromURL() {
 
 function handleModalAcceptClick() {
 
-   var user = document.getElementsByClassName("input_user_name").value;
-   var comment = document.getElementsByClassName("input_comment").value;
+   var user = document.getElementsByClassName("input_user_name")[0].value;
+   var comment = document.getElementsByClassName("input_comment")[0].value;
 
    if (!comment || !user) {
       alert("Please enter all of the fields before submitting.");
    } else {
-      var requrest = new XMLHttpRequest();
+      var request = new XMLHttpRequest();
       var gameNumber = getGameNumberFromURL();
       var requestURL = '/all/' + gameNumber + '/addComment';
       request.open('POST', requestURL);
@@ -41,13 +41,17 @@ function handleModalAcceptClick() {
             commentContainer.insertAdjacentHTML('beforeend', newCommentHTML);
          }
       });
+
+      request.setRequestHeader('Content-Type', 'application/json');
+      request.send(requestBody);
+
    }
 }
 
 window.addEventListener('DOMContentLoaded', function () {
 
   var submitButton = document.getElementsByClassName('submit_button');
-  submitButton.addEventListener('click', handleModalAcceptClick);
+  submitButton[0].addEventListener('click', handleModalAcceptClick);
 
-  }
+
 });

@@ -67,8 +67,9 @@ else
 //======MONGO DB========
 
 app.post('/all/:n/addComment', function (req, res, next){
+  console.log("===post works");
    var n = req.params.n;
-   console.log("post works");
+
    if (req.body && req.body.user && req.body.comment) {
       var comment = {
          user: req.body.user,

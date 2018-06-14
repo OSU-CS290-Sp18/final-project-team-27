@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Handlebars templating",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node server.js",
+    "build": "handlebars views/partials/commentBox.handlebars -f public/commentBoxTemplate.js",
+    "prestart": "npm run build"
+  },
   "repository": {
     "type": "git"
   },
