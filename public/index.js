@@ -57,3 +57,62 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 });
+/********search part******/
+window.onload=function(){
+		document.getElementById("navbar-search-input").addEventListener("keyup",search);  
+}
+function search(){
+                var searchValue=document.getElementById("navbar-search-input").value;
+                var gamelist=document.getElementsByClassName("game_element");
+                if(searchValue==undefined||searchValue.length==0||searchValue.trim()==""){
+                        for(var i=0;i<gamelist.length;i++){
+                                removeClass(gamelist[i],"hidden");
+                        }
+                        return;
+                }else{
+                        var searchValueUpper=searchValue.toUpperCase();
+                        for(var i=0;i<gamelist.length;i++){
+                                removeClass(gamelist[i],"hidden");
+                        }
+                        return;
+                }else{
+                        var searchValueUpper=searchValue.toUpperCase();
+                        for(var i=0;i<gamelist.length;i++){
+                                addClass(gamelist[i],"hidden");
+                                var txt=twitlist[i].getElementsByClassName("game_description_text")[0].innerHTML;
+                                var txtUpper=txt.toUpperCase();
+                                if(txtUpper.indexOf(searchValueUpper.trim())!=-1){
+                                        removeClass(gamelist[i],"hidden");
+                                }
+                        }
+                }
+}
+function addClass(obj,cls) {
+        if(obj.className == ''){
+                obj.className = cls;
+        } else {
+                var arrclassname = obj.className.split(' ');
+                var index = arrIndexOf(arrclassname,cls);
+                if(index == -1) {
+                        obj.className += ' ' + cls;
+                }
+        }
+}
+function removeClass(obj,cls){
+        if(obj.className != ''){
+                var arrClassName = obj.className.split(' ');
+                var index = arrIndexOf(arrClassName,cls);
+                if(index != -1){
+                        arrClassName.splice(index,1);
+                        obj.className = arrClassName.join('');
+                }
+        }
+}
+function arrIndexOf(arr,v){
+        for(var i=0;i<arr.length;i++){
+                if(arr[i] == v){
+                        return i;
+                }
+        }
+        return -1;
+}
