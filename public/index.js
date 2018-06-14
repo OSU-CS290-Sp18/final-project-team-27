@@ -1,13 +1,13 @@
-function insertNewComment(gameType, author, comment) {
+function insertNewComment(category, author, comment) {
 
    if (!comment || !author) {
       alert("Please enter all of the fields before submitting.");
    } else {
       var requrest = new XMLHttpRequest();
-      var requestURL = '/' + gameType + '/addComment';
+      var requestURL = '/' + category + '/addComment';
       request.open('POST', requestURL);
 
-      var requestBody = JSON.stringify({
+      var requestBody = JSON.stringify ({
          author: author,
          comment: comment
       });
