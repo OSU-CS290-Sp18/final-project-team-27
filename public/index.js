@@ -43,3 +43,14 @@ function handleModalAcceptClick() {
       });
    }
 }
+
+window.addEventListener('DOMContentLoaded', function () {
+
+  var submitButton = document.getElementById('submit_button');
+  submit_button.addEventListener('click', handleModalAcceptClick);
+
+
+  }
+
+});
+
