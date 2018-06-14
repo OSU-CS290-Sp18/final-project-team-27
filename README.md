@@ -2,13 +2,17 @@
 
 
 
-
-Use the below to initilize your database.
-Server currently uses a 'commentsDB' collection name.
-```
+pull mongo.init.json to osu flip and push to mongo server first!
 mongoimport --host classmongo.engr.oregonstate.edu \
   --username YOUR_MONGODB_USERNAME                 \
   --db YOUR_MONGODB_DB_NAME                        \
   --password YOUR_MONGODB_PASSWORD                 \
-  --collection people --jsonArray  mongo-db-init.json
-```
+  --collection commentsDB --jsonArray  mongo-db-init.json
+
+also remember to add globel variable in your git bash terminal!
+
+ export MONGO_HOST="classmongo.engr.oregonstate.edu"
+ export MONGO_USER="cs290_xxx"
+ export MONGO_DB_NAME="cs290_xxx"
+ export MONGO_PASSWORD="cs290_lxxx"
+ master
