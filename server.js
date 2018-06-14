@@ -1,5 +1,20 @@
+
 var express = require('express');
 var exphbs = require('express-handlebars');
+
+var bodyParser = require('body-parser');
+var MongoClient = require('mongodb').MongoClient;
+
+var mongoHost = process.env.MONGO_HOST;
+var mongoPort = process.env.MONGO_PORT || 27017;
+var mongoUser = process.env.MONGO_USER;
+var mongoPassword = process.env.MONGO_PASSWORD;
+var mongoDBName = process.env.MONGO_DB_NAME;
+var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword + '@' +
+   mongoHost + ':' + mongoPort + '/' + mongoDBName;
+var mongoDB = null;
+
+
 var allData=require('./allData');
 var fpsData=require('./fpsData');
 var mobData=require('./mobData');
@@ -12,7 +27,8 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
-app.use(express.static('public'));
+
+app.use(bodyParser.json());
 
 
 app.get('/',function(req,res,next){
@@ -47,47 +63,49 @@ else
 	next();
 });
 
-//app.get('/FPS/:gameID',function(req,res,next){
-//var gameNum = req.params.gameID;
-//if(fpsData[gameNum])
-//	res.status(200).render('onegame',{game:fpsData[gameNum]});
-//else
-//	next();
-//});
-//
-//app.get('/sports/:gameID',function(req,res,next){
-//var gameNum = req.params.gameID;
-//if(sportsData[gameNum])
-//	res.status(200).render('onegame',{game:sportsData[gameNum]});
-//else
-//	next();
-//});
-//
-//app.get('/MOB/:gameID',function(req,res,next){
-//var gameNum = req.params.gameID;
-//if(mobData[gameNum])
-//	res.status(200).render('onegame',{game:mobData[gameNum]});
-//else
-//	next();
-//});
-//
-//app.get('/racing/:gameID',function(req,res,next){
-//var gameNum = req.params.gameID;
-//if(racingData[gameNum])
-//	res.status(200).render('onegame',{game:racingData[gameNum]});
-//else
-//	next();
-//});
 
+//======MONGO DB========
 
+app.post('/all/:n/addComment', funciton (req, res, next) {
+   var n = req.params.n;
+   if (req.body && req.body.user && req.body.comment) {
+      var comment = {
+         user: req.body.user,
+         comment: req.body.comment
+      };
+      var commentCollection = mongoDB.collection('comments');
+      commentCollection.updateOne(
+         { commentId: n },
+         { $push: { comments: comment } },
+         function (err, result) {
+            if (err) {
+               res.status(500).send("Error inserting comment into DB.");
+            } else {
+               res.status(200).send("Successfully inserted comment.");
+            }
+         }
+      )
+   }
+});
 
-
+//====================
 
 app.get('*',function(req,res,next){
 res.status(404).render('404');
 });
 
 
-app.listen(port, function () {
-  console.log("== Server listening on port", port);
-})
+MongoClient.connect(mongoURL, function (err, client) {
+   if (err) {
+      throw err;
+   }
+  
+   db = mongoDB = client.db(mongoDBName);
+   
+  app.listen(port, function () {
+      console.log("== Server listening on port", port);
+   });
+});
+
+
+
