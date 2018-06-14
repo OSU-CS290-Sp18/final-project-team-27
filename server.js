@@ -61,12 +61,13 @@ res.status(200).render('home',{game_element:allData});
 
 app.get('/all/:num',function(req,res,next){
 var gameNum = req.params.num;
-var commentCollection = mongoDB.collection('commentDB');
-commentCollection.find({gameId: gameNum}).toArray(function (err, commentDocs){
+var commentCollection = mongoDB.collection('commentsDB');
+commentCollection.find({commentId: gameNum}).toArray(function (err, commentDocs){
+  console.log("commendDocs: ", commentDocs[0]['comments']);
   if (err) {
       res.status(500).send("Error fetching person from DB.");
-    } else if (commentDocs.length > 0 && allData[gameNum]) {
-      res.status(200).render('onegame',{game:allData[gameNum], commentBox:commentDocs});
+    } else if (commentDocs.length > 0) {
+      res.status(200).render('onegame',{game:allData[gameNum], comments:commentDocs[0]['comments'] });
     } else {
       next();
     }

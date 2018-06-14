@@ -7,7 +7,7 @@ text-decoration: none;
 
 a:hover,
 a:focus {
-  color: #319df6;  
+  color: #319df6;
 
 }
 
@@ -33,10 +33,10 @@ a:focus {
 }
 
 .navlink.active {
-  box-shadow: inset 0 -3px #319df6;
+  /* box-shadow: inset 0 -3px #319df6; */
 }
 
-.navbar-search {
+/* .navbar-search {
   float: right;
   margin-right: 20px;
   padding: 0;
@@ -72,10 +72,10 @@ a:focus {
 #navbar-search-button:focus {
   color: #319df6;
   outline: none;
-}
+} */
  h1 {
 	background-color: #3b3b3b;
-	border: 30px  #c9ebfd;; 
+	border: 30px  #c9ebfd;;
 	margin: -5px;
 	padding : 20px;
 }
@@ -87,8 +87,8 @@ a:focus {
 
 
 body {
-background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528428448075&di=892411b13b621f11285863253b535c52&imgtype=0&src=http%3A%2F%2Fpic20.photophoto.cn%2F20110921%2F0005018372131905_b.jpg); 
-background-repeat:no-repeat; 
+background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528428448075&di=892411b13b621f11285863253b535c52&imgtype=0&src=http%3A%2F%2Fpic20.photophoto.cn%2F20110921%2F0005018372131905_b.jpg);
+background-repeat:no-repeat;
 background-attachment:fixed;
 background-size:cover;
 }
@@ -97,21 +97,21 @@ background-size:cover;
 color: white;
 }
  /*---------------------------------------             Tanner's CSS                -------------------------------*/
- 
+
 .games_container{
 
   display:flex;
   justify-content:center;
   flex-direction:column;
   align-items:center;
- 
+
   margin-left:390px;
   margin-right:390px;
   margin-top:0px;
   margin-bottom:10px;
   padding-bottom:200px;
-  padding-top:20px;	
- 
+  padding-top:20px;
+
 }
 
 
@@ -183,7 +183,7 @@ color: white;
   top: 220px;
   font-variant:small-caps;
   font-size:120px;
-  
+
 }
 
     span {
@@ -192,8 +192,8 @@ color: white;
         color: transparent;
         font-weight:bold
     }
-    
-    
+
+
 /*-------------onegame----------*/
 
 .background_container_box{
