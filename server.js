@@ -34,6 +34,11 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 //add other routes and middleware
+app.get('/', function (req, res, next) {
+   res.status(200).render('(something here)');
+});
+
+
 
 app.use('*', function (req, res, next) {
    res.status(404).render('404');
