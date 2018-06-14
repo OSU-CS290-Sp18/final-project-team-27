@@ -2,9 +2,9 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 
+
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
-
 var mongoHost = process.env.MONGO_HOST;
 var mongoPort = process.env.MONGO_PORT || 27017;
 var mongoUser = process.env.MONGO_USER;
@@ -21,7 +21,7 @@ var mobData=require('./mobData');
 var racingData=require('./racingData');
 var sportsData=require('./sportsData');
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3339;
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 
 app.set('view engine', 'handlebars');
@@ -66,7 +66,7 @@ else
 
 //======MONGO DB========
 
-app.post('/all/:n/addComment', funciton (req, res, next) {
+app.post('/all/:n/addComment', function (req, res, next){
    var n = req.params.n;
    if (req.body && req.body.user && req.body.comment) {
       var comment = {
@@ -99,13 +99,10 @@ MongoClient.connect(mongoURL, function (err, client) {
    if (err) {
       throw err;
    }
-  
+
    db = mongoDB = client.db(mongoDBName);
-   
+
   app.listen(port, function () {
       console.log("== Server listening on port", port);
    });
 });
-
-
-
