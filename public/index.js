@@ -1,10 +1,35 @@
-function insertNewComment(category, user, comment) {
+function getCategoryFromURL() {
+   var path = window.location.pathname;
+   var pathParts = path.split('/');
+   if (pathParts[1] === "fps" || pathParts[1] === "moba" || pathParts[1] === "racing" || pathParts[1] === "sports") {
+      return pathParts[1];
+   } else {
+      return null;
+   }
+}
+
+function getGameNumberFromURL() {
+   var path = window.location.pathname;
+   var pathParts = path.split('/');
+   if (pathParts[1] === "fps" || pathParts[1] === "moba" || pathParts[1] === "racing" || pathParts[1] === "sports") {
+      return pathParts[2];
+   } else {
+      return null;
+   }
+}
+
+function handleModalAcceptClick() {
+
+   var user = document.getElementsByClassName("input_user_name").value;
+   var comment = document.getElementsByClassName("input_comment").value;
 
    if (!comment || !author) {
       alert("Please enter all of the fields before submitting.");
    } else {
       var requrest = new XMLHttpRequest();
-      var requestURL = '/' + category + '/addComment';
+      var category = getCategoryFromURL();
+      var gameNumber = getGameNumberFromURL();
+      var requestURL = '/' + category + '/' + gameNumber + '/addComment';
       request.open('POST', requestURL);
 
       var requestBody = JSON.stringify ({
