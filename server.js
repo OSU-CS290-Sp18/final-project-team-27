@@ -30,7 +30,27 @@ app.get('/', function (req, res, next) {
    res.status(200).render('(something here)');
 });
 
-
+app.post('/all/:n/addComment', funciton (req, res, next) {
+   var n = req.params.n;
+   if (req.body && req.body.user && req.body.comment) {
+      var comment = {
+         user: req.body.user,
+         comment: req.body.comment
+      };
+      var commentCollection = mongoDB.collection('comments');
+      commentCollection.updateOne(
+         { commentId: n },
+         { $push: { comments: comment } },
+         function (err, result) {
+            if (err) {
+               res.status(500).send("Error inserting comment into DB.");
+            } else {
+               res.status(200).send("Successfully inserted comment.");
+            }
+         }
+      )
+   }
+});
 
 app.use('*', function (req, res, next) {
    res.status(404).render('404');

@@ -1,13 +1,3 @@
-function getCategoryFromURL() {
-   var path = window.location.pathname;
-   var pathParts = path.split('/');
-   if (pathParts[1] === "fps" || pathParts[1] === "moba" || pathParts[1] === "racing" || pathParts[1] === "sports") {
-      return pathParts[1];
-   } else {
-      return null;
-   }
-}
-
 function getGameNumberFromURL() {
    var path = window.location.pathname;
    var pathParts = path.split('/');
@@ -27,9 +17,8 @@ function handleModalAcceptClick() {
       alert("Please enter all of the fields before submitting.");
    } else {
       var requrest = new XMLHttpRequest();
-      var category = getCategoryFromURL();
       var gameNumber = getGameNumberFromURL();
-      var requestURL = '/' + category + '/' + gameNumber + '/addComment';
+      var requestURL = '/all/' + gameNumber + '/addComment';
       request.open('POST', requestURL);
 
       var requestBody = JSON.stringify ({
