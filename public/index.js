@@ -1,4 +1,4 @@
-function insertNewComment(category, author, comment) {
+function insertNewComment(category, user, comment) {
 
    if (!comment || !author) {
       alert("Please enter all of the fields before submitting.");
@@ -8,7 +8,7 @@ function insertNewComment(category, author, comment) {
       request.open('POST', requestURL);
 
       var requestBody = JSON.stringify ({
-         author: author,
+         user: user,
          comment: comment
       });
       request.setRequestHeader('Content-Type', 'application/json');
@@ -19,7 +19,7 @@ function insertNewComment(category, author, comment) {
          } else {
             var commentTemplate = Handlebars.templates.newTwit; //change to match handlebar name
             var newCommentHTML = commentTemplate ({
-               author: author,
+               user: user,
                comment: comment
             });
 
