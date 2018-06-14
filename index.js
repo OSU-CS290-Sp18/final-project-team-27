@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 });
-/*****mingmingsu, the search is not working, try to fix that******/
+/***** the search is not working, try to fix that******/
 function search(){
                 var searchValue=document.getElementById("navbar-search-input").value;
                 var gamelist=document.getElementsByClassName("game_element");
